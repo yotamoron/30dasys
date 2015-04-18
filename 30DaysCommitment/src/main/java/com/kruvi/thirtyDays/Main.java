@@ -18,12 +18,11 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        final ServerBuilder serverBuilder = new ServerBuilder();
-
-        serverBuilder
+        final String environment = System.getProperty("environment", "dev");
+        final ServerBuilder serverBuilder = new ServerBuilder()
                 .configurationPorts(8080, 8443)
                 .setApplicationName("30DaysCommitment");
-        final String environment = System.getProperty("environment", "dev");
+        
         System.out.println("environment = " + environment);
         if ("prod".equals(environment)) {
             serverBuilder.setAppServerClass(Main.class);
