@@ -15,8 +15,6 @@
  */
 package com.kruvi.thirtyDays.config;
 
-import javax.sql.DataSource;
-
 import org.springframework.context.annotation.*;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.core.io.ClassPathResource;
@@ -25,6 +23,8 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.jdbc.datasource.init.DatabasePopulator;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 import org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository;
+
+import javax.sql.DataSource;
 
 /**
  * Main configuration class for the application.
